@@ -1,0 +1,25 @@
+/*
+  ----------------------------------------
+    Reset & Basic styles
+  ----------------------------------------
+*/
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #3498db;
+	color: #ecf0f1;
+	font: 16px 'Pacifico', Arial, sans-serif;
+}
+
+h1 {
+	font-size: 58px;
+	text-align: center;
+	margin: 50px 0;
+	text-shadow: 4px 4px 1px #2980b9;
+}
