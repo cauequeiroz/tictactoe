@@ -26,6 +26,7 @@ h1 {
 
 .container {
 	width: 324px;
+	height: 324px;
 	margin: 0 auto;
 }
 
@@ -71,5 +72,24 @@ h1 {
 }
 .back {
 	transform: rotateX(180deg);
-	background: black;
+	background: #e74c3c;
+}
+
+/*
+  ----------------------------------------
+    Footer
+  ----------------------------------------
+*/
+footer {
+	clear: both;
+	text-align: center;
+	margin-top: 50px;
+}
+footer a {
+	color: inherit;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #2980b9;
+	transition: all .2s ease;
 }
