@@ -23,3 +23,53 @@ h1 {
 	margin: 50px 0;
 	text-shadow: 4px 4px 1px #2980b9;
 }
+
+.container {
+	width: 324px;
+	margin: 0 auto;
+}
+
+/*
+  ----------------------------------------
+    Game grid with Flip Effect
+  ----------------------------------------
+*/
+.box {
+	perspective: 1000px;
+	position: relative;
+	float: left;
+	margin: 4px;
+}
+.box:hover .flipper {
+	transform: rotateX(-180deg);
+}
+.box, .front, .back {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+}
+
+.flipper {
+	position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	transform-origin: 100% 50px; /* half of height */	
+}
+
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateX(0deg);
+	background: #ecf0f1;
+}
+.back {
+	transform: rotateX(180deg);
+	background: black;
+}
