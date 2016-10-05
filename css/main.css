@@ -42,7 +42,7 @@ h1 {
 	margin: 4px;
 }
 .box:hover .flipper {
-	transform: rotateX(-180deg);
+	transform: rotateX(180deg);
 }
 .box, .front, .back {
 	width: 100px;
@@ -71,7 +71,7 @@ h1 {
 	background: #ecf0f1;
 }
 .back {
-	transform: rotateX(180deg);
+	transform: rotateX(-180deg);
 	background: #e74c3c;
 }
 
