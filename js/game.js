@@ -20,7 +20,7 @@ var State = function(old) {
 
 	this.advanceTurn = function() {
 		this.turn = this.turn === 'X' ? 'O' : 'X';
-	}
+	};
 
 	this.emptyCells = function() {
 		var index_list = [];
@@ -30,7 +30,7 @@ var State = function(old) {
 			}
 		}
 		return index_list;
-	}
+	};
 
 	this.isTerminal = function() {
 		var b = this.board;
@@ -66,5 +66,50 @@ var State = function(old) {
 		} else {
 			return false;
 		}
-	}
+	};
+};
+
+var Game = function(autoPlayer) {
+	this.ai = autoPlayer;
+	this.status = 'beginning';
+
+	this.currentState = new State();
+	this.currentState.turn = 'X';
+	this.currentState.board = ['E','E','E',
+							   'E','E','E',
+							   'E','E','E'];
+	
+	this.advanceTo = function(_state) {
+		this.currentState = _state;
+
+		if ( _state.isTerminal() ) {
+			this.status = 'ended';
+
+			if ( _state.result === 'X-won' ) {
+				ui.switchViewTo('won');
+			}
+			else if ( _state.result === 'O-won' ) {
+				ui.switchViewTo('lost');
+			}
+			else {
+				ui.switchViewTo('draw');
+			}
+		}
+		else {
+			if ( this.currentState.turn === 'X' ) {
+				ui.switchViewTo('human');
+			}
+			else {
+				ui.switchViewTo('robot');
+				this.ai.notify('O');
+			}
+		}
+	};
+
+	this.start = function() {
+		if ( this.status === 'beginning' ) {
+			this.advanceTo(this.currentState);
+			this.status = 'running';
+		}
+	};
 };
