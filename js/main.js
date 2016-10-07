@@ -87,7 +87,6 @@ var tictactoe = {
 				'draw': "It's a draw."
 			}
 
-			console.log(turn);
 			elem.innerHTML = msg[turn];
 			elem.style.opacity = 1;
 
