@@ -48,6 +48,16 @@ h1 {
 	color: white;
 }
 
+.display {
+	text-align: center;
+	border-top: 1px solid white;
+	width: 310px;
+	margin: 25px auto 50px;
+	font-size: 20px;
+	opacity: 0;
+	transition: opacity .2s ease;
+}
+
 /*
   ----------------------------------------
     Game grid with Flip Effect
