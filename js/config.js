@@ -86,21 +86,21 @@ var Game = function(autoPlayer) {
 			this.status = 'ended';
 
 			if ( _state.result === 'X-won' ) {
-				ui.switchViewTo('won');
+				tictactoe.switchViewTo('won');
 			}
 			else if ( _state.result === 'O-won' ) {
-				ui.switchViewTo('lost');
+				tictactoe.switchViewTo('lost');
 			}
 			else {
-				ui.switchViewTo('draw');
+				tictactoe.switchViewTo('draw');
 			}
 		}
 		else {
 			if ( this.currentState.turn === 'X' ) {
-				ui.switchViewTo('human');
+				tictactoe.switchViewTo('human');
 			}
 			else {
-				ui.switchViewTo('robot');
+				tictactoe.switchViewTo('robot');
 				this.ai.notify('O');
 			}
 		}
@@ -112,4 +112,18 @@ var Game = function(autoPlayer) {
 			this.status = 'running';
 		}
 	};
+};
+
+Game.score = function(_state) {
+	if ( _state.result !== 'still running' ) {
+		if ( _state.result === 'X-won' ) {
+			return 10 - _state.oMovesCount; // human player won
+		}
+		else if ( _state.result === 'O-won' ) {
+			return -10 + _state.oMovesCount; // computer won
+		}
+		else {
+			return 0; // it's a draw
+		}
+	}
 };

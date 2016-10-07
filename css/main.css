@@ -40,8 +40,10 @@ h1 {
 	position: relative;
 	float: left;
 	margin: 4px;
+	cursor: pointer;
 }
-.box:hover .flipper {
+.box:hover .flipper,
+.box.turn .flipper {
 	transform: rotateX(180deg);
 }
 .box, .front, .back {
@@ -72,8 +74,9 @@ h1 {
 }
 .back {
 	transform: rotateX(-180deg);
-	background: #e74c3c;
+	background: #2ecc71;
 }
+.o .back { background: #e74c3c; }
 
 /*
   ----------------------------------------

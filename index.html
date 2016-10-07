@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Tictactoe</title>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
@@ -8,56 +9,64 @@
 <body>
 	<h1>tictactoe</h1>
 
+	<!-- Level Select -->
+	<ul class="level">
+		<li><a href="javascript:;" data-level="blind">level 1</a></li>
+		<li><a href="javascript:;" data-level="novice">level 2</a></li>
+		<li><a href="javascript:;" data-level="master">level 3</a></li>
+	</ul>
+
+	<!-- Game Grid -->
 	<div class="container">
-		<div class="box">
+		<div class="box" data-ref="0">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="1">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="2">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="3">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="4">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="5">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="6">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="7">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
 			</div>
 		</div>
-		<div class="box">
+		<div class="box" data-ref="8">
 			<div class="flipper">
 				<div class="front"></div>
 				<div class="back"></div>
@@ -68,5 +77,12 @@
 	<footer>
 		Developed by <a href="https://github.com/cauequeiroz/tictactoe">Caue Queiroz</a>
 	</footer>
+
+	<!-- AI and game config -->
+	<script src="js/config.js"></script>
+	<script src="js/ai.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
 </body>
 </html>
