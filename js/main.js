@@ -1,3 +1,15 @@
+/* ------------------------------------------------
+	Tic tac toe - developed by Caue Queiroz
+
+	About AI:
+	If you want to understand more about the "minimax algorithm"
+	and what happen in js/ai.js and js/config.js, look at this
+	awesome article written by Mostafa Samir:
+
+	https://mostafa-samir.github.io/Tic-Tac-Toe-AI/
+
+   ------------------------------------------------ */
+
 var globals;
 var aiPlayer;
 
